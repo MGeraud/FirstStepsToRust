@@ -1,0 +1,60 @@
+## Main fonction
+
+fn main(){
+}
+
+## fonction retournant quelque chose :
+
+fn addition(x: f64, y:f64) -> f64 {
+    x + y
+}       f64 = float 64 bits
+
+## déclaration de variable :
+Une variable ne peut être être juste déclarée sans la définir
+let name: i32 = 14;    -> let déclare une variable immutable (par défaut) suivi du nom de la variable puis l'indication du type de variable (ex : i32 pour integeer 32 bits)
+let mut name : i32 = 14; -> utilisation du mot clé mut pour créer une variable mutable
+&name  -> pointe vers la référence du la variable, pas la variable elle même
+
+## conditions :
+if predicate {
+} -> où predicate est la condition (ex : listValues.len() > 5)
+
+## Pattern matching équivalent du switch de java
+match result {
+    1 => println!("result = 1"),
+    2 => println!("result = 2"),
+    3..=6 => println!("result compris entre 3 et 6"),
+    7 => println!("result = 7"),
+    _ => println!("result autres"),
+};
+    
+## boucles
+mot clé while
+
+## les lists
+cf Vec
+
+##l'équivalent d'un objet enrust : struct
+on défini la struct puis son implémentation 
+struct Person {
+    nom: String,
+    prenom: String,
+}
+
+impl Person {
+    fn new (nom : String, prenom: string) -> Person{
+        Person { nom, prenom}
+    }
+    
+    fn set_nom(&mut self, new_value: String){
+        self.nom = new_value;
+    }
+    
+    fn set_prenom(&mut self, new_value: String){
+        self.prenom = new_value;
+    }
+}
+
+##documentation
+https://doc.rust-lang.org/std/all.html
+
